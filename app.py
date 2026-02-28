@@ -245,7 +245,7 @@ if csv_file and zip_file:
                         issued_date = f'{today.day}.{today.month}.{today.year}'
                         
                         parameter = {
-                            'FS-ID': [8, f'#{id_prefix}-{bikelock_id}'], 
+                            'FS-ID': [8, f'#{random_selection}'], 
                             'ACTIVE-DATE': [11, issued_date], 
                             'ISSED-DATE': [11, issued_date], 
                             'NAME-TAG': [12, name]
