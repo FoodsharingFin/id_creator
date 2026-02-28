@@ -6,6 +6,5 @@ Pillow
 reportlab
 PyMuPDF
 PyPDF2
-random
 qrcode
 Pillow
