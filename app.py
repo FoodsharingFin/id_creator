@@ -33,7 +33,7 @@ with col1:
         "https://aaltofi-my.sharepoint.com/:x:/r/personal/lukas_junghanns_aalto_fi/_layouts/15/Doc.aspx?sourcedoc=%7B5CC43194-128A-4DA0-994E-ACA720D67AEB%7D&file=Registration%20for%20Aalto%20Foodsharing%20%26%20Pickup%20introduction.xlsx",
         type="primary"
     )
-    st.caption("Click above → File menu → Download → Upload below")
+    st.caption("Click above → 'File' menu → 'Export' → 'Download as CSV UTF-8' → Upload here")
 
 with col2:
     st.subheader("2. Download Face Photos")
@@ -42,7 +42,7 @@ with col2:
         "https://aaltofi-my.sharepoint.com/personal/lukas_junghanns_aalto_fi/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Flukas%5Fjunghanns%5Faalto%5Ffi%2FDocuments%2FApps%2FMicrosoft%20Forms%2FRegistration%20for%20Aalto%20Foodsharing%20%26%20Pickup%20introd%2FQuestion%201&FolderCTID=0x012000F2640C64C08C6F4FB7ED586C22DD6670&view=0",
         type="primary"
     )
-    st.caption("Download all responses as ZIP → Upload below")
+    st.caption("Download all responses as ZIP → Upload below (!DONT EXTRACT)")
 
 st.divider()
 
@@ -121,15 +121,8 @@ if csv_file and zip_file:
         use_container_width=True
     )
     
-    # Configuration
-    st.header("Configuration")
-    col1, col2 = st.columns(2)
-    with col1:
-        id_prefix = st.text_input("ID Prefix", value="2")
-    with col2:
-        bikelock_id = st.text_input("Bikelock ID", value="2")
-    
-    template_pdf_path = st.text_input("Path to ID template PDF", value="data/id_layout.pdf")
+   
+    template_pdf_path = "data/id_layout.pdf"
     
     # Generate button
     if st.button("🚀 Generate ID Cards", type="primary"):
