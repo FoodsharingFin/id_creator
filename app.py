@@ -199,6 +199,7 @@ if csv_file and zip_file:
                 errors = []
                 successful_people = []  # Track successful generations with their data
                 codes = st.secrets["CODES"]
+                codes = codes.split(", ")
                 random_selection = random.sample(codes, len(filtered_registrations))
                 for idx, (index, row) in enumerate(filtered_registrations.iterrows()):
                     try:
