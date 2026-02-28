@@ -14,7 +14,7 @@ An automated tool designed for **Aalto Foodsharing** organizers to quickly gener
 
 ## 🛠️ Installation & Setup
 
-### 1. Requirements
+### Requirements
 
 Ensure your `requirements.txt` includes the following (and **excludes** standard libraries like `random` or `os`):
 
@@ -31,7 +31,7 @@ qrcode
 
 ```
 
-### 2. File Structure
+### File Structure
 
 The app expects the following files to be present in your repository:
 
@@ -44,20 +44,10 @@ The app expects the following files to be present in your repository:
 
 ```
 
-### 3. Streamlit Secrets
-
-This app uses a secret key to pull a list of available ID codes. In your Streamlit Cloud dashboard, go to **Settings > Secrets** and add:
-
-```toml
-CODES = "1001, 1002, 1003, 1004, 1005" # Add your list of unique IDs here
-
-```
-
----
-
 ## 🚀 How to Use
 
-1. **Export Data:** * Download the Registration Excel from SharePoint as a **CSV (UTF-8)**.
+1. **Export Data:** 
+* Download the Registration Excel from SharePoint as a **CSV (UTF-8)**.
 * Download the "Photos" folder from Microsoft Forms as a **ZIP file** (Do not unzip it).
 
 
@@ -79,7 +69,5 @@ CODES = "1001, 1002, 1003, 1004, 1005" # Add your list of unique IDs here
 
 ## 👥 Contributors
 
-* Developed for the **Aalto Foodsharing** community.
-* Maintainer: [Your Name/GitHub Profile]
-
+* Developed for the **Aalto Foodsharing** community with the help of Claude and Gemini.
 ---
