@@ -1,3 +1,4 @@
+from urllib.parse import unquote
 import streamlit as st
 import pandas as pd
 import datetime
@@ -113,7 +114,7 @@ if csv_file and zip_file:
     st.write(f"**{len(filtered_registrations)} people registered for {selected_date}**")
     
     # Extract filenames from photo URLs and normalize Telegram handles
-    filtered_registrations['filename'] = filtered_registrations[photo_column].str.split('/').str[-1]
+    filtered_registrations['filename'] = filtered_registrations[photo_column].apply(lambda x: unquote(str(x).split('/')[-1]))
     filtered_registrations['telegram_normalized'] = filtered_registrations[telegram_column].apply(normalize_telegram_handle)
     
     st.dataframe(
