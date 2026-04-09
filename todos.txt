@@ -1,0 +1,5 @@
+Open tasks:
+- drop down next data (take last date as default)
+- add link of web telegram
+- adjust reach out text
+- adjust image croping
