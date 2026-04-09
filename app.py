@@ -104,7 +104,7 @@ if csv_file and zip_file:
     
     # Extract unique dates
     available_dates = registrations[date_column].dropna().unique().tolist()
-    
+    available_dates = available_dates[::-1] # sort backwards to display latest date first ;) 
     st.header("Select Introduction Date")
     selected_date = st.selectbox("Choose a date to generate IDs for:", available_dates)
     
@@ -310,7 +310,7 @@ if csv_file and zip_file:
                                     st.markdown(f"**Telegram:** [{telegram}]({telegram_url})")
                                     
                                     # Message template
-                                    message = f"Hey {name}, nice that you signed up for the introduction pick up at: {selected_date}, see you at the Väre Fridge!"
+                                    message = f"Hey, nice that you signed up for the foodsharing introduction pick up at: {selected_date}, see you at the Väre Fridge!"
                                     st.text_area(
                                         "Message to copy:",
                                         message,
